@@ -1,0 +1,57 @@
+body {
+    background: #020202;
+    color: #ffffff;
+    
+}
+
+.menu{
+    text-align: center;
+    padding: 2%;
+    background-color: #4747d1;
+    color: #000000;
+}
+.menu-choice {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffcc;
+    color: #000000 ;
+    
+}
+#message {
+    width: 25%;
+}
+.menu-choice button {
+    line-height: 25px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    
+}
+.menu-choice button:hover {
+    background-color: #4747d1;
+}
+
+.container-items{
+    margin: 0 auto;
+    box-sizing: border-box;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.item {
+    box-sizing: border-box;
+    width: 30%;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    background-color: pink;
+    border-radius: 10%;
+}

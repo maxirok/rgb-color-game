@@ -1,11 +1,8 @@
-let colors = [
-    "rgb(255, 0, 255)",
-    "rgb(255, 255, 0)",
-    "rgb(255, 0, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 0, 255)",
-    "rgb(0, 0, 0)",  
-];
+'use strict';
+    document.addEventListener('DOMContentLoaded', function() {
+
+
+let colors = generateArrayColors(6);
 
 
 const items = document.querySelectorAll('.item');
@@ -24,8 +21,7 @@ for(let i=0; i < colors.length; i++){
         } else {
             message.textContent = "try again";
             this.style.backgroundColor = "#020202";
-        }
-        
+        }  
     });
 };
 
@@ -34,3 +30,15 @@ function allColors(color) {
         items[i].style.backgroundColor = color;
     }
 };
+        
+function generateArrayColors(num){
+    let arr = [];
+    for (let i=0; i<num; i++){
+    let r = (Math.floor(Math.random()* 256));
+    let g = (Math.floor(Math.random()* 256));
+    let b = (Math.floor(Math.random()* 256));
+    arr.push("rgb(" + r + ", " + g + ", " + b + ")");     
+    }
+    return arr;  
+};
+

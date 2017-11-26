@@ -11,7 +11,7 @@ let colors = [
 const items = document.querySelectorAll('.item');
 const colorDisplay = document.getElementById('color-display');
 const message = document.getElementById('message');
-const pickedColor = colors[3];
+const pickedColor = colors[Math.floor(Math.random()* colors.length)];
 
 colorDisplay.textContent = pickedColor;
 for(let i=0; i < colors.length; i++){
@@ -19,10 +19,18 @@ for(let i=0; i < colors.length; i++){
     items[i].addEventListener('click', function(){
         let clickedColor = this.style.backgroundColor;
         if (clickedColor === pickedColor) {
-            alert('yes!');
+            message.textContent = "correct";
+            allColors(pickedColor);
         } else {
-            alert('no ');
+            message.textContent = "try again";
+            this.style.backgroundColor = "#020202";
         }
         
     });
+};
+
+function allColors(color) {
+    for(let i=0; i < items.length; i++){
+        items[i].style.backgroundColor = color;
+    }
 };

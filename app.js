@@ -3,12 +3,12 @@
 
 
 let colors = generateArrayColors(6);
-
-
 const items = document.querySelectorAll('.item');
 const colorDisplay = document.getElementById('color-display');
 const message = document.getElementById('message');
-const pickedColor = colors[Math.floor(Math.random()* colors.length)];
+const resetButton = document.getElementById('reset');
+const menu = document.querySelector('.menu');
+let pickedColor = colors[Math.floor(Math.random()* colors.length)];
 
 colorDisplay.textContent = pickedColor;
 for(let i=0; i < colors.length; i++){
@@ -25,10 +25,20 @@ for(let i=0; i < colors.length; i++){
     });
 };
 
+resetButton.addEventListener('click', function(){
+    colors = generateArrayColors(6);
+    pickedColor = colors[Math.floor(Math.random()* colors.length)];
+    colorDisplay.textContent = pickedColor;
+    for(let i=0; i < colors.length; i++){
+    items[i].style.backgroundColor = colors[i]; }
+    menu.style.backgroundColor = "#4747d1";
+});
+
 function allColors(color) {
     for(let i=0; i < items.length; i++){
         items[i].style.backgroundColor = color;
     }
+    menu.style.backgroundColor = color;
 };
         
 function generateArrayColors(num){
@@ -42,3 +52,4 @@ function generateArrayColors(num){
     return arr;  
 };
 
+    });

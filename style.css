@@ -1,5 +1,5 @@
 body {
-    background: #020202;
+    background: #f5f6fa;
     color: #ffffff;
     
 }
@@ -7,7 +7,7 @@ body {
 .menu{
     text-align: center;
     padding: 2%;
-    background-color: #4747d1;
+    background-color: #7f8ff4;
     color: #000000;
 }
 .menu-choice {
@@ -19,7 +19,7 @@ body {
     
 }
 #message {
-    text-align: center;
+    text-align: right;
     width: 25%;
     padding: 10px;
 }
@@ -48,12 +48,46 @@ body {
     width: 50%;
     justify-content: space-around;
 }
+.container {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
+}
 .item {
     box-sizing: border-box;
     width: 30%;
     padding-bottom: 30%;
     margin: 1.66%;
-    background-color: pink;
     border-radius: 10%;
+}
+
+.guess-n {
+    width: 360px;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+    margin-top: 100px;
+
+}
+#enter {
+    display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+    cursor: pointer;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 12px 36px;
+    background:  #7f8ff4;
+    margin-top: 50px;
+   
 }

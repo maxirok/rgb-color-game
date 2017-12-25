@@ -13,16 +13,18 @@
     <div class="menu-choice">
         <button id="reset">New game</button>
         <span id="message"></span>
-        <button>easy</button>
-        <button>hard</button>
     </div>
-    <div class="container-items">
+    <div class="container">
+        <form>
+            <input class="guess-n" type="text" name="guess-number" pattern="^(0|[1-9][0-9]*)$"  required>
+            <button id="enter">Enter</button>
+        </form>
+        <!-- <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
+        <div class="item"></div> -->
     </div>
      <script src="app.js" type="text/javascript"></script>
 </body>
